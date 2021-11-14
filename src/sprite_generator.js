@@ -1,8 +1,8 @@
 function setup() {
-  let canvasSize = 500;
+  let canvasSize = 1000;
   createCanvas(canvasSize, canvasSize);
-  let scaleFactor = 1; //for resizing up;
-  let spriteSize = 25; //in pixels, one side of the square image
+  let scaleFactor = 10; //for resizing up;
+  let spriteSize = 10; //in pixels, one side of the square image
   let padding = 10; //in pixels, between each image
   let numSprites = floor(canvasSize / ((spriteSize + padding) * scaleFactor)); //sets number of sprites based on how many can fit
 
@@ -46,7 +46,7 @@ function setup() {
         color1 = [random(255), random(255), random(255)]; //sets a new color for the row
 
         for (x = 0; x < img.width / 2; x++) {
-          color1 = [random(255), random(255), random(255)]; //sets a new color at the pixel level
+          // color1 = [random(255), random(255), random(255)]; //sets a new color at the pixel level
 
           let red = color1[0];
 
@@ -54,7 +54,7 @@ function setup() {
 
           let blue = color1[2];
 
-          let alpha = random(120, 255);
+          let alpha = random(0, 255);
 
           writeColor(img, x, y, red, green, blue, alpha);
           writeColor(img, img.width - x - 1, y, red, green, blue, alpha); //-1?
@@ -63,9 +63,9 @@ function setup() {
 
       img.updatePixels();
 
-      img.resize(spriteSize * scaleFactor, spriteSize * scaleFactor);
+      // img.resize(spriteSize * scaleFactor, spriteSize * scaleFactor);
 
-      //img.resizeNN(spriteSize * scaleFactor, spriteSize * scaleFactor); //nearest neighbour resize to scale up without interpolation
+      img.resizeNN(spriteSize * scaleFactor, spriteSize * scaleFactor); //nearest neighbour resize to scale up without interpolation
 
       image(img, padding * scaleFactor + i, padding * scaleFactor + u);
     }

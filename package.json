@@ -1,0 +1,22 @@
+{
+  "name": "sprite-generator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wjb8/sprite-generator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wjb8/sprite-generator/issues"
+  },
+  "homepage": "https://github.com/wjb8/sprite-generator#readme",
+  "dependencies": {
+    "prettier": "^2.4.1"
+  }
+}
